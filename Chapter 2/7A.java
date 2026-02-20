@@ -1,0 +1,31 @@
+//7. Найти число, состоящее только из различных цифр. Если таких чисел несколько, найти первое из них.
+//Торяшиев Жаргал Б763-2а
+
+import java.util.Scanner;
+
+void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите количество чисел:");
+        int x = scan.nextInt();
+        System.out.println("Введите числа:");
+        for (int i = 0; i < x; i++) {
+            String num = scan.next();
+            if (proverka(num)) {
+                System.out.println("Первое число с различными цифрами: " + num);
+                return;
+            }
+        }
+        System.out.println("Таких чисел не найдено.");
+    }
+
+    public static boolean proverka(String s) {
+        char[] numb = s.toCharArray();
+        for (int i = 0; i < numb.length; i++) {
+            for (int k = i + 1; k < numb.length; k++) {
+                if (numb[i] == numb[k]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+}
