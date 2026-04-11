@@ -1,0 +1,5 @@
+8.1	  c) HelloHello
+8.2	  d) 339
+8.3	  c, e
+8.4	  a) [a, b, c]
+8.5	  a) st = st.concat("1"); sb.append("b");
