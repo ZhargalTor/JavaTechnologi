@@ -1,0 +1,5 @@
+7.1	  d) compilation fails at line 1
+7.2	  a) 0 JDK
+7.3	  c, d
+7.4	  a) 14
+7.5	  b) strings.filter(x -> x.length() <= 4).count()
