@@ -1,1 +1,7 @@
+ТОРЯШИЕВ ЖАРГАЛ Б763-2А
 
+10.1	  d) вывод выходного буфера
+10.2	  e) PrintStream
+10.3	  a) int number = Integer.valueOf(reader.readLine());
+10.4	  e) файл mail.properties будет скопирован в директорию datares
+10.5	  c) ошибка компиляции в строке 1
