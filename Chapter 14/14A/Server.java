@@ -17,7 +17,6 @@ public class Server {
 
     private static final int PORT = 12345;
 
-    // Список клиентов
     private static final Set<ClientHandler> clients =
             ConcurrentHashMap.newKeySet();
 
@@ -43,7 +42,6 @@ public class Server {
         }
     }
 
-    // Отправка всем клиентам
     public static void broadcast(String message) {
 
         for (ClientHandler client : clients) {
@@ -51,12 +49,10 @@ public class Server {
         }
     }
 
-    // Удаление клиента
     public static void removeClient(ClientHandler client) {
         clients.remove(client);
     }
 
-    // Класс клиента
     static class ClientHandler implements Runnable {
 
         private Socket socket;
@@ -79,7 +75,6 @@ public class Server {
                 out = new PrintWriter(
                         socket.getOutputStream(), true);
 
-                // Имя клиента
                 out.println("Введите имя:");
 
                 name = in.readLine();
