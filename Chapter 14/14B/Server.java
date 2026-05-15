@@ -31,10 +31,8 @@ public class Server {
 
             Scanner scanner = new Scanner(System.in);
 
-            // Своё поле
             char[][] myField = createField();
 
-            // Поле противника
             char[][] enemyField = createEmptyField();
 
             while (true) {
@@ -45,7 +43,6 @@ public class Server {
                 System.out.println("\n====== ПОЛЕ ПРОТИВНИКА ======");
                 printField(enemyField);
 
-                // ===== ХОД СЕРВЕРА =====
                 System.out.print("\nВаш ход (строка столбец): ");
 
                 int r = scanner.nextInt() -1;
@@ -63,7 +60,6 @@ public class Server {
 
                 System.out.println("Результат: " + result);
 
-                // ===== ХОД КЛИЕНТА =====
                 System.out.println("\nОжидание хода противника...");
 
                 String shot = in.readLine();
@@ -92,7 +88,6 @@ public class Server {
 
                 out.println(answer);
 
-                // Проверка победы
                 if (allShipsDestroyed(myField)) {
 
                     System.out.println("\nВы проиграли!");
@@ -108,7 +103,6 @@ public class Server {
         }
     }
 
-    // Создание поля с кораблями
     static char[][] createField() {
 
         char[][] field = new char[SIZE][SIZE];
@@ -136,7 +130,6 @@ public class Server {
         return field;
     }
 
-    // Пустое поле противника
     static char[][] createEmptyField() {
 
         char[][] field = new char[SIZE][SIZE];
@@ -147,7 +140,6 @@ public class Server {
         return field;
     }
 
-    // Печать поля
     static void printField(char[][] field) {
 
         System.out.print("  ");
@@ -171,7 +163,6 @@ public class Server {
         }
     }
 
-    // Проверка уничтожения всех кораблей
     static boolean allShipsDestroyed(char[][] field) {
 
         for (char[] row : field) {
