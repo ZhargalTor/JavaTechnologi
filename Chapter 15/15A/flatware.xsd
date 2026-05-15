@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Перечисление -->
+    <xs:simpleType name="materialType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Steel"/>
+            <xs:enumeration value="Iron"/>
+            <xs:enumeration value="Copper"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Ограничения -->
+    <xs:simpleType name="lengthType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="10"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="FlatWare">
+
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="Item" maxOccurs="unbounded">
+
+                    <xs:complexType>
+
+                        <xs:sequence>
+
+                            <xs:element name="Type"
+                                        type="xs:string"/>
+
+                            <xs:element name="Origin"
+                                        type="xs:string"/>
+
+                            <xs:element name="Visual">
+
+                                <xs:complexType>
+
+                                    <xs:sequence>
+
+                                        <xs:element name="Length"
+                                                    type="lengthType"/>
+
+                                        <xs:element name="Width"
+                                                    type="lengthType"/>
+
+                                        <xs:element name="Material"
+                                                    type="materialType"/>
+
+                                        <xs:element name="Handle">
+
+                                            <xs:complexType mixed="true">
+
+                                                <xs:simpleContent>
+
+                                                    <xs:extension base="xs:string">
+
+                                                        <xs:attribute name="type"
+                                                                      type="xs:string"
+                                                                      use="required"/>
+
+                                                    </xs:extension>
+
+                                                </xs:simpleContent>
+
+                                            </xs:complexType>
+
+                                        </xs:element>
+
+                                    </xs:sequence>
+
+                                </xs:complexType>
+
+                            </xs:element>
+
+                            <xs:element name="Value"
+                                        type="xs:boolean"/>
+
+                        </xs:sequence>
+
+                    </xs:complexType>
+
+                </xs:element>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>

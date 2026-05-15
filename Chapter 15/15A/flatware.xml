@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FlatWare xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="flatware.xsd">
+
+    <Item>
+        <Type>Knife</Type>
+        <Origin>Germany</Origin>
+
+        <Visual>
+            <Length>20</Length>
+            <Width>30</Width>
+            <Material>Steel</Material>
+            <Handle type="wood">Oak</Handle>
+        </Visual>
+
+        <Value>true</Value>
+    </Item>
+
+    <Item>
+        <Type>Fork</Type>
+        <Origin>France</Origin>
+
+        <Visual>
+            <Length>15</Length>
+            <Width>20</Width>
+            <Material>Iron</Material>
+            <Handle type="metal">Metal</Handle>
+        </Visual>
+
+        <Value>false</Value>
+    </Item>
+
+    <Item>
+        <Type>Spoon</Type>
+        <Origin>Italy</Origin>
+
+        <Visual>
+            <Length>12</Length>
+            <Width>25</Width>
+            <Material>Copper</Material>
+            <Handle type="plastic">Plastic</Handle>
+        </Visual>
+
+        <Value>true</Value>
+    </Item>
+
+</FlatWare>
