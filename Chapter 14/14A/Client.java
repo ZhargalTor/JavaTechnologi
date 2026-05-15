@@ -21,7 +21,6 @@ public class Client {
                 Scanner scanner = new Scanner(System.in)
         ) {
 
-            // Поток чтения сообщений
             Thread reader = new Thread(() -> {
 
                 try {
@@ -40,7 +39,6 @@ public class Client {
 
             reader.start();
 
-            // Отправка сообщений
             while (true) {
 
                 String message = scanner.nextLine();
