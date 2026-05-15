@@ -4,7 +4,6 @@ import java.sql.ResultSet;
 
 public class ProductQueries {
 
-    // Параметры группы продукции
     public static void showParametersForGroup(int groupId) {
 
         String sql = """
@@ -33,7 +32,6 @@ public class ProductQueries {
         }
     }
 
-    // Продукция без заданного параметра
     public static void showProductsWithoutParameter(int parameterId) {
 
         String sql = """
@@ -62,7 +60,6 @@ public class ProductQueries {
         }
     }
 
-    // Продукция по группе
     public static void showProductsByGroup(int groupId) {
 
         String sql = """
@@ -90,7 +87,6 @@ public class ProductQueries {
         }
     }
 
-    // Продукция со всеми параметрами
     public static void showProductDetails() {
 
         String sql = """
